@@ -433,49 +433,67 @@ Matt Steele
 <li><p>Platform Independent and Non-proprietary</p></li>
 <li><p>Reproducibility and Transparency</p></li>
 <li><p>Integrates into Proprietary Software</p></li>
-<li><p>Shareable</p></li>
+<li><p>Share-able</p></li>
 <li><p>Add-on Libraries</p></li>
 </ul></li>
 </ul>
 </section>
 <section id="anaconda-navigator" class="slide level2">
 <h2>Anaconda Navigator</h2>
-<p><a href="https://www.anaconda.com/">https://www.anaconda.com/</a></p>
+<p><a href="https://www.anaconda.com/" class="uri">https://www.anaconda.com/</a></p>
 <p>Anaconda is a popular and powerful distribution of Python and R programming languages specifically tailored for data science, machine learning, and scientific computing.</p>
+</section>
+<section id="what-is-jupyterlab" class="slide level2">
+<h2>What is JupyterLab?</h2>
+<p><a href="https://jupyter.org/" class="uri">https://jupyter.org/</a></p>
+<ul>
+<li>JupyterLab is an interactive development environment for notebooks, code, and data.</li>
+<li>It offers an enhanced interface for working with Jupyter Notebooks, terminals, text editors, and file browsers all in one place.</li>
+</ul>
 </section>
 <section id="opening-jupyterlab-through-anaconda-navigator" class="slide level2">
 <h2>Opening JupyterLab through Anaconda Navigator</h2>
 <ol type="1">
 <li><strong>Open Anaconda Navigator</strong>
 <ul>
-<li>Launch Anaconda Navigator from your desktop shortcut or by typing <code>anaconda-navigator</code> in your terminal/command prompt.</li>
+<li>Follow the steps above to launch Anaconda Navigator.</li>
 </ul></li>
-<li><strong>Launch JupyterLab</strong>
+<li><strong>Open JupyterLab</strong>
 <ul>
-<li>In the Navigator, you’ll see a list of available tools.<br>
-</li>
-<li>Click on <strong>JupyterLab</strong> to open the interface.</li>
-</ul></li>
-<li><strong>Create a New Environment (Optional)</strong>
-<ul>
-<li>You can create a new environment or use an existing one before launching JupyterLab for organizing your packages and dependencies.</li>
+<li>Click on <strong>JupyterLab</strong> within Anaconda Navigator to open it.</li>
 </ul></li>
 </ol>
 </section>
-<section id="what-is-jupyterlab" class="slide level2">
-<h2>What is JupyterLab?</h2>
-<p><a href="https://jupyter.org/">https://jupyter.org/</a></p>
+<section id="set-up-your-environment" class="slide level2">
+<h2>Set up your Environment</h2>
+<div class="r-fit-text">
+<ol start="3" type="1">
+<li><strong>Select Your Working Directory</strong>
 <ul>
-<li>JupyterLab is an interactive development environment for notebooks, code, and data.</li>
-<li>It offers an enhanced interface for working with Jupyter Notebooks, terminals, text editors, and file browsers all in one place.</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<p>*** Let’s launch JupyterLab and explore! ***</p>
+<li>Use the directory navigator on the right to select the folder you will be working in.</li>
+</ul></li>
+<li><strong>Start a New Notebook</strong>
+<ul>
+<li>Click on <strong>File</strong> &gt; <strong>New Notebook</strong> &gt; <strong>Python 3</strong> to start a new Python notebook.</li>
+</ul></li>
+<li><strong>Select the Python Kernel</strong>
+<ul>
+<li>Ensure that the Python kernel is selected. You can check this in the top-right corner of the notebook interface.</li>
+</ul></li>
+<li><strong>Save Your Notebook</strong>
+<ul>
+<li>Click on <strong>File</strong> &gt; <strong>Save Notebook As</strong> to give your notebook a name and save it.</li>
+</ul></li>
+<li><strong>Save the Current Workspace</strong>
+<ul>
+<li>Click on <strong>File</strong> &gt; <strong>Save Current Workspace As</strong> to save your workspace settings.</li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="setting-your-preferences-in-jupyterlab" class="slide level2">
 <h2>Setting Your Preferences in JupyterLab</h2>
+<div class="r-fit-text">
 <ol type="1">
 <li><strong>Theme Customization</strong>
 <ul>
@@ -498,6 +516,7 @@ Matt Steele
 <li>Customize keyboard shortcuts for running cells, switching windows, or opening the terminal under <strong>Settings</strong> &gt; <strong>Advanced Settings Editor</strong> &gt; <strong>Keyboard Shortcuts</strong>.</li>
 </ul></li>
 </ol>
+</div>
 </section>
 <section id="cells" class="slide level2">
 <h2>Cells</h2>
@@ -509,31 +528,22 @@ Matt Steele
 <li><strong>Raw Cells</strong> – For displaying unformatted text or data.</li>
 </ol>
 </section>
+<section id="entering-data" class="slide level2">
+<h2>Entering Data</h2>
+<p>In Python, you can work with data by defining variables, lists, or other data structures. Let’s start by entering some data and practicing basic operations.</p>
+</section>
+<section id="lists" class="slide level2">
+<h2>Lists</h2>
+<p>Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
+</section>
 <section id="functions" class="slide level2">
 <h2>Functions</h2>
 <p>used to give commands to perform a tasks.</p>
 
 <img src="toolbox.png" alt="toolbox" width="25%" class="r-stretch"><p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">len</span>(fruits)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>mean(c(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">500</span>))</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="bu">str</span>(<span class="dv">400</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside class="notes">
-<p>ready-made tools or functions that you can use in the R programming language. Imagine you have a toolbox, and in that toolbox, you have different tools for various tasks like measuring, cutting, or fixing things.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="arguments" class="slide level2">
 <h2>Arguments</h2>
@@ -541,12 +551,13 @@ Matt Steele
 
 <img src="pizza.png" alt="pizza" width="55%" class="r-stretch"><p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5000</span>, <span class="at">size =</span> <span class="dv">50</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5000</span>, <span class="dv">50</span>, <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.14159</code></pre>
+</div>
 </div>
 <aside class="notes">
-<p>arguments in R as the ingredients or details you provide to a function, like telling a chef how to prepare your food. These arguments help customize what the function does, and the function’s output is like the dish you receive based on your requests.</p>
+<p>arguments in python as the ingredients or details you provide to a function, like telling a chef how to prepare your food. These arguments help customize what the function does, and the function’s output is like the dish you receive based on your requests.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -564,14 +575,22 @@ Matt Steele
 <p>provides the necessary information, explanations, examples, and guidance to help you learn, understand, and effectively use R functions and packages.</p>
 <p><br></p>
 <ul>
-<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html">Base R Function Documentation</a></li>
-<li><a href="https://dplyr.tidyverse.org/reference/index.html">Dplyr Documentation</a></li>
-<li>Get help with a package, function, or argument within R. Using <strong>(?)</strong> or <strong>help(“</strong>name of function”)</li>
-<li>The <strong>TAB</strong> button will also provide help with suggestions and auto-filling options</li>
+<li><a href="https://docs.python.org/3/library/index.html">Base Python Standard Library</a></li>
+<li><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></li>
+<li><a href="https://numpy.org/doc/stable/">NumPy Documentation</a></li>
 </ul>
 </section>
-<section id="objects" class="slide level2">
-<h2>Objects</h2>
+<section id="getting-help-in-python" class="slide level2">
+<h2>Getting Help in Python</h2>
+<ol type="1">
+<li><strong>Help with Functions and Libraries</strong>
+<ul>
+<li>Use the <code>help()</code> function to get information about a function or library.</li>
+</ul></li>
+</ol>
+</section>
+<section id="variables" class="slide level2">
+<h2>Variables</h2>
 <p>used to store and work on data (numbers, words, tables, and more).</p>
 
 <img src="drawer.png" alt="drawer" width="55%" class="r-stretch"><aside class="notes">
@@ -588,34 +607,9 @@ Matt Steele
           display:block!important;
       }</style></aside>
 </section>
-<section id="assignment-operator--" class="slide level2">
-<h2>Assignment Operator (&lt;-)</h2>
-<p>used to create an object</p>
-<p><br></p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: left;">PC</th>
-<th style="text-align: left;">MAC</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Assignment Operator</strong></td>
-<td style="text-align: left;">ALT + -</td>
-<td style="text-align: left;">CMD + -</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>a <span class="ot">&lt;-</span> <span class="dv">35</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>b <span class="ot">&lt;-</span> <span class="dv">45</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>a</span>
-<span id="cb3-5"><a href="#cb3-5"></a>a <span class="sc">+</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="creating-and-using-variables" class="slide level2">
+<h2>Creating and Using Variables</h2>
+<h3 id="example-1-storing-numbers">Example 1: Storing Numbers</h3>
 </section>
 <section id="naming-objects" class="slide level2">
 <h2>Naming Objects</h2>
@@ -626,63 +620,87 @@ Matt Steele
 <li>Avoid using reserved words or functions (e.g., “if,” “else,” “for,” “function”).</li>
 </ul>
 </section>
-<section id="data-types" class="slide level2">
-<h2>Data Types</h2>
+<section id="data-types-in-python" class="slide level2">
+<h2>Data Types in Python</h2>
 <div class="r-fit-text">
 <p><br></p>
 <table>
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 20%">
+<col style="width: 79%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>type</th>
-<th>values</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Double or Numeric</strong></td>
-<td>used for numbers which can be integers (whole numbers) or real numbers (numbers with decimal points).</td>
+<td><strong>Integer</strong></td>
+<td>Represents whole numbers. Example: <code>5</code>, <code>-3</code>, <code>42</code>.</td>
 </tr>
 <tr class="even">
-<td><strong>Character</strong></td>
-<td>used for text, words, and strings of characters. Enclose in double (““) or single (’’) quotes.</td>
+<td><strong>Float</strong></td>
+<td>Represents real numbers (numbers with decimal points). Example: <code>3.14</code>, <code>-0.001</code>.</td>
 </tr>
 <tr class="odd">
-<td><strong>Factor</strong></td>
-<td>used to represent categorical data with predefined levels.</td>
+<td><strong>String</strong></td>
+<td>Represents text, words, and strings of characters. Enclosed in double (<code>"</code>) or single (<code>'</code>) quotes.</td>
 </tr>
 <tr class="even">
-<td><strong>Date</strong></td>
-<td>used for handling dates, times, and time intervals.</td>
+<td><strong>List</strong></td>
+<td>Represents a collection of items, which can be of different types. Example: <code>[1, 2, 3]</code>, <code>['a', 'b']</code>.</td>
+</tr>
+<tr class="odd">
+<td><strong>Tuple</strong></td>
+<td>Represents an immutable collection of items. Example: <code>(1, 2, 3)</code>, <code>('a', 'b')</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>Dictionary</strong></td>
+<td>Represents a collection of key-value pairs. Example: <code>{'key1': 'value1', 'key2': 'value2'}</code>.</td>
 </tr>
 <tr class="odd">
 <td><strong>Boolean</strong></td>
-<td>used for decision-making and represented by binary values, typically <strong><code>TRUE</code></strong> or <strong><code>FALSE</code></strong></td>
+<td>Represents binary values used for decision-making. Typically <code>True</code> or <code>False</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>Date</strong></td>
+<td>Handles dates and times. Use the <code>datetime</code> module. Example: <code>datetime.date(2024, 9, 13)</code>.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="packages" class="slide level2">
-<h2>Packages</h2>
-<p>R packages are like toolkits or collections of pre-built functions, data sets, and tools that extend the capabilities of the R programming language.</p>
+<section id="packages-libraries" class="slide level2">
+<h2>Packages &amp; Libraries</h2>
+<p>packages are like toolkits or collections of pre-built functions, data sets, and tools that extend the capabilities of the R programming language.</p>
 </section>
-<section id="packages-1" class="slide level2">
+<section id="packages" class="slide level2">
 <h2>Packages</h2>
 <p><br></p>
 <h4 id="install">Install</h4>
 <p>You must install a package before you can load it. <em>But you only need to install it one time.</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">!</span>conda install pandas</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="op">!</span>conda <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
-<h4 id="load">Load</h4>
-<p>For every new session, you must load the package to use the it’s functions.</p>
+</section>
+<section id="explore-your-environment" class="slide level2">
+<h2>Explore your Environment</h2>
+<h4 id="import">Import</h4>
+<p>Using import for a library will bring all functions for the library into your workspace</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Example: Reading a CSV file with pandas</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Assume we have a 'data.csv' file</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"customer_reviews.csv"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># Display the first 5 rows of the data</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="bu">print</span>(data.head())   <span class="co"># Output: 3.141592653589793</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="vectors" class="slide level2">
