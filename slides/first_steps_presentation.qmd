@@ -31,6 +31,14 @@ execute:
 
     -   Python for Data Analysis: Step-By-Step with Projects
 
+## Agenda
+
+1.  Introduction to Python and Python Environments
+2.  Functions and Arguments
+3.  Creating Variables
+4.  Comparisons, Conditionals, and Loops
+5.  Packages and Libraries
+
 ## Why Python
 
 -   Open-source
@@ -113,13 +121,15 @@ There are three main types of cells:
 2.  **Markdown Cells** -- For writing formatted text (like headings, lists, links).
 3.  **Raw Cells** -- For displaying unformatted text or data.
 
-## Entering Data
+## Working Data
 
 In Python, you can work with data by defining variables, lists, or other data structures. Let's start by entering some data and practicing basic operations.
 
 ## Lists
 
 Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+<br>
 
 ```{python}
 #| label: enter list
@@ -131,11 +141,33 @@ print(my_var)
 
 ```
 
+## Import
+
+Using import for a library will bring all functions for the library into your workspace.
+
+<br>
+
+```{python}
+#| label: import
+#| eval: false
+#| echo: true
+
+import pandas as pd
+
+# Example: Reading a CSV file with pandas
+# Assume we have a 'data.csv' file
+reviews_df = pd.read_csv("customer_reviews.csv")
+
+# Display the first 5 rows of the data
+print(reviews_df.head())
+
+```
+
 ## Functions
 
 used to give commands to perform a tasks.
 
-<img src="toolbox.png" alt="toolbox" width="25%"/>
+![](toolbox.png)
 
 <br>
 
@@ -152,7 +184,7 @@ round(3.141592653589793)
 
 used to provide the details about how your function operates
 
-<img src="pizza.png" alt="pizza" width="55%"/>
+![](hammer.jpg)
 
 <br>
 
@@ -184,6 +216,8 @@ provides the necessary information, explanations, examples, and guidance to help
 1.  **Help with Functions and Libraries**
     -   Use the `help()` function to get information about a function or library.
 
+<br>
+
 ```{python}
 #| label: help
 #| eval: false
@@ -208,6 +242,8 @@ used to store and work on data (numbers, words, tables, and more).
 
 ### Example 1: Storing Numbers
 
+<br>
+
 ```{python}
 #| label: variable example
 #| eval: false
@@ -229,7 +265,7 @@ print(temperature_celsius)
 
 ```
 
-## Naming Objects
+## Naming Variables
 
 -   Use descriptive and meaningful names that indicate the purpose of the object
 -   Use lowercase letters.
@@ -240,7 +276,7 @@ print(temperature_celsius)
 
 ::: r-fit-text
 | Type        | Description                                                                                         |
-|-----------------|-------------------------------------------------------|
+|----------------------|--------------------------------------------------|
 | **Integer** | Represents whole numbers. Example: `5`, `-3`, `42`.                                                 |
 | **Float**   | Represents real numbers (numbers with decimal points). Example: `3.14`, `-0.001`.                   |
 | **String**  | Represents text, words, and strings of characters. Enclosed in double (`"`) or single (`'`) quotes. |
@@ -248,16 +284,74 @@ print(temperature_celsius)
 | **Date**    | Handles dates and times. Use the `datetime` module. Example: `datetime.date(2024, 9, 13)`.          |
 :::
 
-## Comparisons and Boolean Operators
+## Creating a Function
+
+In Python, functions allow you to package a block of code that can be reused throughout your program. This makes your code more organized, readable, and reusable.
+
+<br>
+
+```{python}
+#| label: create_function
+#| eval: false
+#| echo: true
+
+# Step 1: Create Variables
+
+name = input("What is your name: ")
+age = input("What is your age: ")
+
+
+#Step 2: Define the function
+
+def demo(name, age):
+    print(name, age)
+   
+#Step 3: Call the function
+
+demo(name, age)
+
+```
+
+## Running Code
+
+In Python, indents are used to define the structure of the code. Unlike some other programming languages that use curly braces {} or keywords to indicate blocks of code, Python uses indentation. This makes the code more readable and easier to understand.
+
+<br>
+
+```{python}
+#| label: indentation
+#| eval: false
+#| echo: true
+
+def check_number(number):  # Starts the function; the indented lines below are part of this function
+    if number > 0:
+        print("The number is positive.")
+    elif number < 0:
+        print("The number is negative.")
+    else:
+        print("The number is zero.")  # This is where the function's code ends
+
+print("Hello World")  # This starts a new section of code
+
+
+```
+
+## Boolean Operators
+
+|                          |     |
+|--------------------------|-----|
+| Equal                    | ==  |
+| Not Equal                | !=  |
+| Greater Than             | \>  |
+| Less Than                | \<  |
+| Greater Than or Equal to | \>= |
+| Less Than or Equal to    | \<= |
+
+## Comparions
 
 Use comparison operators to determine if objects in python are identical to each other.
 
-Equal ( == )
-Not equal ( != )
-Greater than ( > )
-Less than ( < )
-Greater than or equal ( >= )
-Less than or equal ( <= )
+<br>
 
 ```{python}
 #| label: comparisons
@@ -272,17 +366,24 @@ fruit2= "orange"
 #Are items/variables == to each other
 fruit1 == fruit2
 
+##boolean operators - > Can be combined variables/inputs with boolean operators AND, OR, NOT
+
+6 > 3 and 1 < 2
+
 ```
+
+## Conditions
+
+|      |                                                                                                                             |
+|------|-----------------------------------------------------------------------------------------------------------------------------|
+| If   | If the conditions made in the statement are met then perform the operation.                                                 |
+| Else | If the conditions made in the statement are NOT met then perform another operations.                                        |
+| Elif | If the condition made in the statement are NOT met by either the IF statement or the ELSE statement perform this operation. |
 
 ## Conditionals
 
 ::: r-fit-text
-
 Python operators that looks to see if an object meets stated conditions and will then run operations based of those determinations.
-
-If = If the conditions made in the statement are met then perform the operation.
-Else = If the conditions made in the statement are NOT met then perform another operations.
-Elif = If the condition made in the statement are NOT met by either the IF statement or the ELSE statement perform this operation.
 
 ```{python}
 #| label: conditionals
@@ -314,7 +415,53 @@ else:
 
 ## Loops
 
+The requested operation will repeat until it is told to stop.
 
+## For Loops
+
+:::r-fit-text
+
+The 'for' loop is typically used when you know the number of iterations in advance or when you want to iterate over a sequence or an iterable object.
+
+*syntax: **for** variable **in** iterable*
+
+-   variable: This is a placeholder variable that will take on the value of each element in the iterable object during each iteration of the loop.
+
+-   iterable: This is the object over which the loop iterates. It can be a sequence (like a list, tuple, or string) or any other iterable object.
+
+```{python}
+#| label: for_loops
+#| eval: false
+#| echo: true
+
+#for loop
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+```
+
+:::
+
+## While Loops
+
+The while loop is typically used when you don't know the number of iterations in advance or when you want to loop as long as a certain condition is true.
+
+<br>
+
+```{python}
+#| label: while_loops
+#| eval: false
+#| echo: true
+
+x = 0
+while x <= 20:
+    print(x)
+    x = x + 1
+    
+print("Stop looping")
+```
 
 ## Packages & Libraries
 
@@ -328,6 +475,8 @@ packages are like toolkits or collections of pre-built functions, data sets, and
 
 You must install a package before you can load it. *But you only need to install it one time.*
 
+<br>
+
 ```{python}
 #| label: install packages
 #| eval: false
@@ -339,9 +488,73 @@ You must install a package before you can load it. *But you only need to install
 
 ```
 
+
+## Packages
+
+#### Import
+
+Using import for a library will bring all functions for the library into your workspace.
+
+<br>
+
+```{python}
+#| label: import_library
+#| echo: true
+#| eval: false
+
+import math
+
+# Now you can use any tool from the math toolbox
+print(math.sqrt(16))  # Output: 4.0
+print(math.pi)        # Output: 3.141592653589793
+
+
+```
+
+## Packages
+
+#### From
+
+Using from will just bring one particular function from the library into your workspace.
+
+<br>
+
+```{python}
+#| label: import_from
+#| eval: false
+#| echo: true
+
+from math import sqrt
+
+# Now you can use just the sqrt tool directly
+print(sqrt(16))  # Output: 4.0
+```
+
+## Packages
+
+#### Alias
+
+To make the library easier to reference, you can assign it an alias using the as keyword.
+
+<br>
+
+```{python}
+#| label: alias
+#| echo: true
+#| eval: false
+
+import pandas as pd 
+
+my_var = pd.Series(my_var)
+
+my_var.mean()
+```
+
 <br>
 
 ## Explore your Environment
+
+<br>
 
 ```{python}
 #| label: environment
@@ -362,167 +575,19 @@ You must install a package before you can load it. *But you only need to install
 
 ```
 
-#### Import
+## Next Week
 
-Using import for a library will bring all functions for the library into your workspace
+-   Entering Data
 
-```{python}
-#| label: import
-#| eval: false
-#| echo: true
+-   Loading and Exporting Data Frames
 
-import pandas as pd
+-   Cleaning and Transforming Data
 
-# Example: Reading a CSV file with pandas
-# Assume we have a 'data.csv' file
-data = pd.read_csv("customer_reviews.csv")
-
-# Display the first 5 rows of the data
-print(data.head())   # Output: 3.141592653589793
-
-```
-
-## Sequence Types
-
-ordered collections of data items of the same type.
-
-[Python Documentation - Sequence Types](https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range)
-
-|              |                                                                                            |                                            |
-|--------------|--------------------------------------------------------------------------------------------|--------------------------------------------|
-| Tupples      | A tuple is a collection which is ordered and unchangeable.                                 | (1, 2, 3, 4)                               |
-| Sets         |  A set is a collection which is unordered, unchangeable, and unindexed.                    | {1, 2, 3, 4}                               |
-| Dictionaries | A dictionary is a collection which is ordered\*, changeable and does not allow duplicates. | {key1: value1, key2: value2, key3:value3 } |
-
-## Dictionary
-
-A dictionary is a collection which is ordered\*, changeable and does not allow duplicates.
-
-```{python}
-#| label: example_dictionary
-#| eval: false
-#| echo: true
-
-country_roads = {"Morgantown": 30847, "Charlestown": 45879, "Reedsville": 603, "Huntington": 44934}
-print(country_roads)
-
-```
-
-## Series
-
-Like a dictionary in the standard library, a series from Pandas allows you to store key-value pairs in python.
-
-```{python}
-#| label: example_series
-#| eval: false
-#| echo: true
-
-import pandas as pd
-
-series_example = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
-series_example
-```
-
-## Data Frame
-
-A **Pandas DataFrame** is a two-dimensional, size-mutable, and heterogeneous tabular data structure. It is composed of:
-
--   **Variables** (or columns), which represent the data types.
-
--   **Observations** (or rows), which represent individual data entries.
-
-Each variable (column) in a DataFrame typically contains data of the same type (e.g., integers, strings). However, different variables can contain different data types.
-
-<br>
-
-```{python}
-#| label: create data frame
-#| eval: false
-#| echo: true
-
-import pandas as pd
-
-# Creating individual Series for each column
-year_series = pd.Series([1977, 1980, 1983], name="Year")
-title_series = pd.Series(["Star Wars", "Empire Strikes Back", "Return of the Jedi"], name="Title")
-length_series = pd.Series([121, 124, 144], name="Length")  # Movie length in minutes
-gross_series = pd.Series([787, 534, 572], name="Gross")  # Gross revenue in millions
-
-# Creating the DataFrame
-starwars_df = pd.DataFrame({
-    "Year": year_series,
-    "Title": title_series,
-    "Length": length_series,
-    "Gross": gross_series
-})
-
-# Displaying the DataFrame
-print(starwars_df)
-
-```
-
-## Subsetting Variables
-
-used to select and work with specific variables (columns) from a data frame.
-
-<br>
-
-```{python}
-#| label: subsetting
-#| eval: false
-#| echo: true
-
-starwars_df['Title']
-
-mean_length = starwars_df["Length"].mean()
-
-# Displaying the result
-
-print("Mean Length of Movies:", mean_length)
-```
-
-## Explore Data Frame
-
-```{python}
-#| label: explore_data
-#| eval: false
-#| echo: true
-
-# data values
-
-starwars_df.dtypes
-
-# summary statistics
-
-starwars_df.describe()
-
-# shape 
-
-starwars_df.shape
-
-
-c
-```
-
-## Export / Save Data
-
-Once you are done entering your data, you can export it to your working directory. The function without built-in arguments is **write.table( )** but if are saving it as a csv, you are better using **write.csv( )**.
-
-<br>
-
-```{python}
-#| label: export files
-#| eval: false
-#| echo: true
-
-# Exporting the DataFrame to a CSV file
-starwars_df.to_csv("starwars.csv", index=False)
-```
-
+-   Data Analysis Tools
 
 ## Conclusion
 
 -   [Matt Steele](https://directory.lib.wvu.edu/employee/210/)
--   [Data Cleaning and Analysis with R and RStudio](https://wvu.libcal.com/event/12978849)
--   [Data Visualization and Presentation with R and RStudio](https://wvu.libcal.com/event/12978954)
+-   [Data Cleaning and Analysis with Python](https://wvu.libcal.com/event/12979455)
+-   [Data Visualization and Presentation with Python](https://wvu.libcal.com/event/12979521)
 -   [Date Services Workshops](https://wvu.libcal.com/calendar/researchcommons?cid=9552&t=g&d=0000-00-00&cal=9552&ct=59746&inc=0)

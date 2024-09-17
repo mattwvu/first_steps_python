@@ -423,6 +423,16 @@ Matt Steele
 </ul></li>
 </ul>
 </section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ol type="1">
+<li>Introduction to Python and Python Environments</li>
+<li>Functions and Arguments</li>
+<li>Creating Variables</li>
+<li>Comparisons, Conditionals, and Loops</li>
+<li>Packages and Libraries</li>
+</ol>
+</section>
 <section id="why-python" class="slide level2">
 <h2>Why Python</h2>
 <ul>
@@ -528,33 +538,50 @@ Matt Steele
 <li><strong>Raw Cells</strong> – For displaying unformatted text or data.</li>
 </ol>
 </section>
-<section id="entering-data" class="slide level2">
-<h2>Entering Data</h2>
+<section id="working-data" class="slide level2">
+<h2>Working Data</h2>
 <p>In Python, you can work with data by defining variables, lists, or other data structures. Let’s start by entering some data and practicing basic operations.</p>
 </section>
 <section id="lists" class="slide level2">
 <h2>Lists</h2>
 <p>Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
+<p><br></p>
+<div id="enter-list" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>my_var <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(my_var)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="import" class="slide level2">
+<h2>Import</h2>
+<p>Using import for a library will bring all functions for the library into your workspace.</p>
+<p><br></p>
+<div id="import" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Example: Reading a CSV file with pandas</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Assume we have a 'data.csv' file</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>reviews_df <span class="op">=</span> pd.read_csv(<span class="st">"customer_reviews.csv"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># Display the first 5 rows of the data</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="bu">print</span>(reviews_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="functions" class="slide level2">
 <h2>Functions</h2>
 <p>used to give commands to perform a tasks.</p>
 
-<img src="toolbox.png" alt="toolbox" width="25%" class="r-stretch"><p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img data-src="toolbox.png" class="r-stretch"><p><br></p>
+<div id="example-function" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="arguments" class="slide level2">
 <h2>Arguments</h2>
 <p>used to provide the details about how your function operates</p>
 
-<img src="pizza.png" alt="pizza" width="55%" class="r-stretch"><p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>3.14159</code></pre>
-</div>
+<img data-src="hammer.jpg" class="r-stretch"><p><br></p>
+<div id="example_arguments" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="bu">round</span>(<span class="fl">3.141592653589793</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <p>arguments in python as the ingredients or details you provide to a function, like telling a chef how to prepare your food. These arguments help customize what the function does, and the function’s output is like the dish you receive based on your requests.</p>
@@ -588,6 +615,11 @@ Matt Steele
 <li>Use the <code>help()</code> function to get information about a function or library.</li>
 </ul></li>
 </ol>
+<p><br></p>
+<div id="help" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a> <span class="bu">help</span>(<span class="bu">print</span>)  <span class="co"># Get help on the print function</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>   <span class="bu">help</span>(<span class="st">'pandas'</span>)  <span class="co"># Get help on the pandas library</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="variables" class="slide level2">
 <h2>Variables</h2>
@@ -610,9 +642,24 @@ Matt Steele
 <section id="creating-and-using-variables" class="slide level2">
 <h2>Creating and Using Variables</h2>
 <h3 id="example-1-storing-numbers">Example 1: Storing Numbers</h3>
+<p><br></p>
+<div id="variable-example" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Storing an integer</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>age <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Storing a floating-point number in Fahrenheit</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>temperature_fahrenheit <span class="op">=</span> <span class="fl">100.6</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># Converting Fahrenheit to Celsius</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>temperature_celsius <span class="op">=</span> (temperature_fahrenheit <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a></span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="bu">print</span>(age)</span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="bu">print</span>(temperature_celsius) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="naming-objects" class="slide level2">
-<h2>Naming Objects</h2>
+<section id="naming-variables" class="slide level2">
+<h2>Naming Variables</h2>
 <ul>
 <li>Use descriptive and meaningful names that indicate the purpose of the object</li>
 <li>Use lowercase letters.</li>
@@ -623,11 +670,10 @@ Matt Steele
 <section id="data-types-in-python" class="slide level2">
 <h2>Data Types in Python</h2>
 <div class="r-fit-text">
-<p><br></p>
 <table>
 <colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
+<col style="width: 30%">
+<col style="width: 69%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -649,27 +695,185 @@ Matt Steele
 <td>Represents text, words, and strings of characters. Enclosed in double (<code>"</code>) or single (<code>'</code>) quotes.</td>
 </tr>
 <tr class="even">
-<td><strong>List</strong></td>
-<td>Represents a collection of items, which can be of different types. Example: <code>[1, 2, 3]</code>, <code>['a', 'b']</code>.</td>
-</tr>
-<tr class="odd">
-<td><strong>Tuple</strong></td>
-<td>Represents an immutable collection of items. Example: <code>(1, 2, 3)</code>, <code>('a', 'b')</code>.</td>
-</tr>
-<tr class="even">
-<td><strong>Dictionary</strong></td>
-<td>Represents a collection of key-value pairs. Example: <code>{'key1': 'value1', 'key2': 'value2'}</code>.</td>
-</tr>
-<tr class="odd">
 <td><strong>Boolean</strong></td>
 <td>Represents binary values used for decision-making. Typically <code>True</code> or <code>False</code>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Date</strong></td>
 <td>Handles dates and times. Use the <code>datetime</code> module. Example: <code>datetime.date(2024, 9, 13)</code>.</td>
 </tr>
 </tbody>
 </table>
+</div>
+</section>
+<section id="creating-a-function" class="slide level2">
+<h2>Creating a Function</h2>
+<p>In Python, functions allow you to package a block of code that can be reused throughout your program. This makes your code more organized, readable, and reusable.</p>
+<p><br></p>
+<div id="create_function" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Step 1: Create Variables</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name: "</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your age: "</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">#Step 2: Define the function</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="kw">def</span> demo(name, age):</span>
+<span id="cb7-10"><a href="#cb7-10"></a>    <span class="bu">print</span>(name, age)</span>
+<span id="cb7-11"><a href="#cb7-11"></a>   </span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="co">#Step 3: Call the function</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>demo(name, age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="running-code" class="slide level2">
+<h2>Running Code</h2>
+<p>In Python, indents are used to define the structure of the code. Unlike some other programming languages that use curly braces {} or keywords to indicate blocks of code, Python uses indentation. This makes the code more readable and easier to understand.</p>
+<p><br></p>
+<div id="indentation" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> check_number(number):  <span class="co"># Starts the function; the indented lines below are part of this function</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">if</span> number <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-3"><a href="#cb8-3"></a>        <span class="bu">print</span>(<span class="st">"The number is positive."</span>)</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">elif</span> number <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-5"><a href="#cb8-5"></a>        <span class="bu">print</span>(<span class="st">"The number is negative."</span>)</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-7"><a href="#cb8-7"></a>        <span class="bu">print</span>(<span class="st">"The number is zero."</span>)  <span class="co"># This is where the function's code ends</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a></span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)  <span class="co"># This starts a new section of code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="boolean-operators" class="slide level2">
+<h2>Boolean Operators</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Equal</td>
+<td>==</td>
+</tr>
+<tr class="even">
+<td>Not Equal</td>
+<td>!=</td>
+</tr>
+<tr class="odd">
+<td>Greater Than</td>
+<td>&gt;</td>
+</tr>
+<tr class="even">
+<td>Less Than</td>
+<td>&lt;</td>
+</tr>
+<tr class="odd">
+<td>Greater Than or Equal to</td>
+<td>&gt;=</td>
+</tr>
+<tr class="even">
+<td>Less Than or Equal to</td>
+<td>&lt;=</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comparions" class="slide level2">
+<h2>Comparions</h2>
+<p>Use comparison operators to determine if objects in python are identical to each other.</p>
+<p><br></p>
+<div id="comparisons" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#Comparison</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a>fruit1<span class="op">=</span> <span class="st">"apple"</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>fruit2<span class="op">=</span> <span class="st">"orange"</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">#Are items/variables == to each other</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>fruit1 <span class="op">==</span> fruit2</span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co">##boolean operators - &gt; Can be combined variables/inputs with boolean operators AND, OR, NOT</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="dv">6</span> <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conditions" class="slide level2">
+<h2>Conditions</h2>
+<table>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 95%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>If</td>
+<td>If the conditions made in the statement are met then perform the operation.</td>
+</tr>
+<tr class="even">
+<td>Else</td>
+<td>If the conditions made in the statement are NOT met then perform another operations.</td>
+</tr>
+<tr class="odd">
+<td>Elif</td>
+<td>If the condition made in the statement are NOT met by either the IF statement or the ELSE statement perform this operation.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conditionals" class="slide level2">
+<h2>Conditionals</h2>
+<div class="r-fit-text">
+<p>Python operators that looks to see if an object meets stated conditions and will then run operations based of those determinations.</p>
+<div id="conditionals" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>water_cold <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="cf">if</span> water_cold:</span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="bu">print</span>(<span class="st">"Brrrrrr"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="cf">if</span> water_cold:</span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="bu">print</span>(<span class="st">"Brrrrr"</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="cf">else</span>:</span>
+<span id="cb10-9"><a href="#cb10-9"></a>  <span class="bu">print</span>(<span class="st">"I can drink this)</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="er">water_temp = 0</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="cf">if</span> water_temp <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb10-14"><a href="#cb10-14"></a>  <span class="bu">print</span>(<span class="st">"Brrrrrr"</span>)</span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="cf">elif</span> water_temp <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb10-16"><a href="#cb10-16"></a>    <span class="bu">print</span>(<span class="st">"tccchhhhh"</span>)</span>
+<span id="cb10-17"><a href="#cb10-17"></a><span class="cf">else</span>:</span>
+<span id="cb10-18"><a href="#cb10-18"></a>    <span class="bu">print</span>(<span class="st">"I can drink this"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="loops" class="slide level2">
+<h2>Loops</h2>
+<p>The requested operation will repeat until it is told to stop.</p>
+</section>
+<section id="for-loops" class="slide level2">
+<h2>For Loops</h2>
+<div class="r-fit-text">
+<p>The ‘for’ loop is typically used when you know the number of iterations in advance or when you want to iterate over a sequence or an iterable object.</p>
+<p><em>syntax: <strong>for</strong> variable <strong>in</strong> iterable</em></p>
+<ul>
+<li><p>variable: This is a placeholder variable that will take on the value of each element in the iterable object during each iteration of the loop.</p></li>
+<li><p>iterable: This is the object over which the loop iterates. It can be a sequence (like a list, tuple, or string) or any other iterable object.</p></li>
+</ul>
+<div id="for_loops" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#for loop</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>]</span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
+<span id="cb11-5"><a href="#cb11-5"></a>    <span class="bu">print</span>(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="while-loops" class="slide level2">
+<h2>While Loops</h2>
+<p>The while loop is typically used when you don’t know the number of iterations in advance or when you want to loop as long as a certain condition is true.</p>
+<p><br></p>
+<div id="while_loops" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">while</span> x <span class="op">&lt;=</span> <span class="dv">20</span>:</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="bu">print</span>(x)</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="bu">print</span>(<span class="st">"Stop looping"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="packages-libraries" class="slide level2">
@@ -681,119 +885,84 @@ Matt Steele
 <p><br></p>
 <h4 id="install">Install</h4>
 <p>You must install a package before you can load it. <em>But you only need to install it one time.</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">!</span>conda install pandas</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="op">!</span>conda <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div id="install-packages" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">!</span>conda install pandas</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="op">!</span>conda <span class="bu">list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="packages-1" class="slide level2">
+<h2>Packages</h2>
+<h4 id="import-1">Import</h4>
+<p>Using import for a library will bring all functions for the library into your workspace.</p>
+<p><br></p>
+<div id="import_library" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> math</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co"># Now you can use any tool from the math toolbox</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="bu">print</span>(math.sqrt(<span class="dv">16</span>))  <span class="co"># Output: 4.0</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="bu">print</span>(math.pi)        <span class="co"># Output: 3.141592653589793</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="packages-2" class="slide level2">
+<h2>Packages</h2>
+<h4 id="from">From</h4>
+<p>Using from will just bring one particular function from the library into your workspace.</p>
+<p><br></p>
+<div id="import_from" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co"># Now you can use just the sqrt tool directly</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="bu">print</span>(sqrt(<span class="dv">16</span>))  <span class="co"># Output: 4.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="packages-3" class="slide level2">
+<h2>Packages</h2>
+<h4 id="alias">Alias</h4>
+<p>To make the library easier to reference, you can assign it an alias using the as keyword.</p>
+<p><br></p>
+<div id="alias" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a>my_var <span class="op">=</span> pd.Series(my_var)</span>
+<span id="cb16-4"><a href="#cb16-4"></a></span>
+<span id="cb16-5"><a href="#cb16-5"></a>my_var.mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 </section>
 <section id="explore-your-environment" class="slide level2">
 <h2>Explore your Environment</h2>
-<h4 id="import">Import</h4>
-<p>Using import for a library will bring all functions for the library into your workspace</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Example: Reading a CSV file with pandas</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Assume we have a 'data.csv' file</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"customer_reviews.csv"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># Display the first 5 rows of the data</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="bu">print</span>(data.head())   <span class="co"># Output: 3.141592653589793</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="vectors" class="slide level2">
-<h2>Vectors</h2>
-<p>ordered collections of data items of the same type.</p>
-
-<img src="row.png" alt="table row" width="55%" class="r-stretch"><p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>vec_one <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a>vec_two <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a>vec_two</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="data-frame" class="slide level2">
-<h2>Data Frame</h2>
-<p>two-dimensional sequence of data variables (columns) and observations (rows). While each variable in a data frame typically contains data of the same type, different variable can contain different data types.</p>
 <p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># create vectors</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>title <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Star Wars"</span>, <span class="st">"The Empire Strikes Back"</span>, <span class="st">"Return of the Jedi"</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a>year <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1977</span>, <span class="dv">1980</span>, <span class="dv">1983</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>length.min <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">121</span>, <span class="dv">124</span>, <span class="dv">133</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>box.office.mil <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">787</span>, <span class="dv">534</span>, <span class="dv">572</span>)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>  </span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co"># combine these vectors with the data.frame() function</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>  starWars.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(title, year, length.min, box.office.mil)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>  starWars.data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="environment" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># see</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="op">!</span>conda <span class="bu">list</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="co"># search</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a></span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="op">!</span>conda search beautifulsoup</span>
+<span id="cb17-8"><a href="#cb17-8"></a></span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="co"># update</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a></span>
+<span id="cb17-11"><a href="#cb17-11"></a><span class="op">!</span>conda update beautifulsoup4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="subsetting-variables" class="slide level2">
-<h2>Subsetting Variables</h2>
-<p>used to select and work with specific variables (columns) from a data frame.</p>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>starWars.data<span class="sc">$</span>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="export-save-data" class="slide level2">
-<h2>Export / Save Data</h2>
-<p>Once you are done entering your data, you can export it to your working directory. The function without built-in arguments is <strong>write.table( )</strong> but if are saving it as a csv, you are better using <strong>write.csv( )</strong>.</p>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">write.csv</span>(starWars.data, <span class="st">"starwars.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="load-data" class="slide level2">
-<h2>Load Data</h2>
-<p>load data from a file in your working directory using the <strong>read_csv()</strong> function from tidyverse. There is also the <strong>read.csv( )</strong> function in base R.</p>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>fight_songs <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fight-songs.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="explore-data" class="slide level2">
-<h2>Explore Data</h2>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">view</span>(fight_songs) <span class="co"># view in a new tab</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">nrow</span>(fight_songs) <span class="co"># number of rows</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">ncol</span>(fight_songs) <span class="co"># number of columns</span></span>
-<span id="cb11-6"><a href="#cb11-6"></a></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="fu">str</span>(fight_songs) <span class="co"># structure of data frame</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="descriptive-statistics" class="slide level2">
-<h2>Descriptive Statistics</h2>
-<p><br></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">summary</span>(fight_songs) <span class="co"># various descriptive statistics</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">sum</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># sum a variable</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="fu">mean</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># average a variable</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="fu">median</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># middle value of a variable</span></span>
-<span id="cb12-8"><a href="#cb12-8"></a></span>
-<span id="cb12-9"><a href="#cb12-9"></a><span class="fu">sd</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># standard deviation of a variable</span></span>
-<span id="cb12-10"><a href="#cb12-10"></a></span>
-<span id="cb12-11"><a href="#cb12-11"></a><span class="fu">min</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># minimum value of a variable</span></span>
-<span id="cb12-12"><a href="#cb12-12"></a></span>
-<span id="cb12-13"><a href="#cb12-13"></a><span class="fu">max</span>(fight_songs<span class="sc">$</span>number_fights) <span class="co"># maximum value of a variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="next-week" class="slide level2">
+<h2>Next Week</h2>
+<ul>
+<li><p>Entering Data</p></li>
+<li><p>Loading and Exporting Data Frames</p></li>
+<li><p>Cleaning and Transforming Data</p></li>
+<li><p>Data Analysis Tools</p></li>
+</ul>
 </section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
 <ul>
 <li><a href="https://directory.lib.wvu.edu/employee/210/">Matt Steele</a></li>
-<li><a href="https://wvu.libcal.com/event/12978849">Data Cleaning and Analysis with R and RStudio</a></li>
-<li><a href="https://wvu.libcal.com/event/12978954">Data Visualization and Presentation with R and RStudio</a></li>
+<li><a href="https://wvu.libcal.com/event/12979455">Data Cleaning and Analysis with Python</a></li>
+<li><a href="https://wvu.libcal.com/event/12979521">Data Visualization and Presentation with Python</a></li>
 <li><a href="https://wvu.libcal.com/calendar/researchcommons?cid=9552&amp;t=g&amp;d=0000-00-00&amp;cal=9552&amp;ct=59746&amp;inc=0">Date Services Workshops</a></li>
 </ul>
 <div class="footer footer-default">
@@ -1011,44 +1180,6 @@ Matt Steele
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
